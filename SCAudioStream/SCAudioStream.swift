@@ -9,7 +9,7 @@
 public class SCAudioStream {
   public let title:String
   
-  init(_ title:String) {
+  public init(_ title:String) {
     self.title = title
   }
   public func showTitle() -> String {
