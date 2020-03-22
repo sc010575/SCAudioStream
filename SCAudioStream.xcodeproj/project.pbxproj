@@ -7,8 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C5190F712425132500C57795 /* SCAudioStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5190F702425132500C57795 /* SCAudioStream.swift */; };
+		C5014BDC2427B2E800909373 /* AVPlayerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BD82427B2E800909373 /* AVPlayerWrapper.swift */; };
+		C5014BDD2427B2E800909373 /* AVPlayerWrapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BD92427B2E800909373 /* AVPlayerWrapperProtocol.swift */; };
+		C5014BDE2427B2E800909373 /* AVPlayerWrapperDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BDA2427B2E800909373 /* AVPlayerWrapperDelegate.swift */; };
+		C5014BDF2427B2E800909373 /* AVPlayerWrapperState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BDB2427B2E800909373 /* AVPlayerWrapperState.swift */; };
+		C5014BE32427B2FF00909373 /* AVPlayerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BE02427B2FF00909373 /* AVPlayerObserver.swift */; };
+		C5014BE42427B2FF00909373 /* AVPlayerItemObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BE12427B2FF00909373 /* AVPlayerItemObserver.swift */; };
+		C5014BE52427B2FF00909373 /* AVPlayerTimeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BE22427B2FF00909373 /* AVPlayerTimeObserver.swift */; };
+		C5014BEB2427B32000909373 /* SCAudioStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BE62427B32000909373 /* SCAudioStream.swift */; };
+		C5014BEC2427B32000909373 /* APError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BE72427B32000909373 /* APError.swift */; };
+		C5014BED2427B32000909373 /* TimeEventFrequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BE82427B32000909373 /* TimeEventFrequency.swift */; };
+		C5014BEE2427B32000909373 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BE92427B32000909373 /* Event.swift */; };
+		C5014BEF2427B32000909373 /* AudioItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BEA2427B32000909373 /* AudioItem.swift */; };
+		C5014BF72427C33700909373 /* AudioSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BF52427C33700909373 /* AudioSession.swift */; };
+		C5014BF82427C33700909373 /* AudioSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BF62427C33700909373 /* AudioSessionController.swift */; };
+		C5190F9E2425321B00C57795 /* SCAudioStreamTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5190F9D2425321B00C57795 /* SCAudioStreamTest.swift */; };
+		C5190FA02425321B00C57795 /* libSCAudioStream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5190F6D2425132500C57795 /* libSCAudioStream.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5190FA12425321B00C57795 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5190F652425132500C57795 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5190F6C2425132500C57795;
+			remoteInfo = SCAudioStream;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C5190F6B2425132500C57795 /* CopyFiles */ = {
@@ -23,8 +48,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C5014BD82427B2E800909373 /* AVPlayerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVPlayerWrapper.swift; path = SCAudioStream/Classes/AVPlayerWrapper/AVPlayerWrapper.swift; sourceTree = SOURCE_ROOT; };
+		C5014BD92427B2E800909373 /* AVPlayerWrapperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVPlayerWrapperProtocol.swift; path = SCAudioStream/Classes/AVPlayerWrapper/AVPlayerWrapperProtocol.swift; sourceTree = SOURCE_ROOT; };
+		C5014BDA2427B2E800909373 /* AVPlayerWrapperDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVPlayerWrapperDelegate.swift; path = SCAudioStream/Classes/AVPlayerWrapper/AVPlayerWrapperDelegate.swift; sourceTree = SOURCE_ROOT; };
+		C5014BDB2427B2E800909373 /* AVPlayerWrapperState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVPlayerWrapperState.swift; path = SCAudioStream/Classes/AVPlayerWrapper/AVPlayerWrapperState.swift; sourceTree = SOURCE_ROOT; };
+		C5014BE02427B2FF00909373 /* AVPlayerObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVPlayerObserver.swift; path = SCAudioStream/Classes/Observer/AVPlayerObserver.swift; sourceTree = SOURCE_ROOT; };
+		C5014BE12427B2FF00909373 /* AVPlayerItemObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVPlayerItemObserver.swift; path = SCAudioStream/Classes/Observer/AVPlayerItemObserver.swift; sourceTree = SOURCE_ROOT; };
+		C5014BE22427B2FF00909373 /* AVPlayerTimeObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVPlayerTimeObserver.swift; path = SCAudioStream/Classes/Observer/AVPlayerTimeObserver.swift; sourceTree = SOURCE_ROOT; };
+		C5014BE62427B32000909373 /* SCAudioStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCAudioStream.swift; path = Classes/SCAudioStream.swift; sourceTree = "<group>"; };
+		C5014BE72427B32000909373 /* APError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APError.swift; path = Classes/APError.swift; sourceTree = "<group>"; };
+		C5014BE82427B32000909373 /* TimeEventFrequency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeEventFrequency.swift; path = Classes/TimeEventFrequency.swift; sourceTree = "<group>"; };
+		C5014BE92427B32000909373 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Classes/Event.swift; sourceTree = "<group>"; };
+		C5014BEA2427B32000909373 /* AudioItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioItem.swift; path = Classes/AudioItem.swift; sourceTree = "<group>"; };
+		C5014BF52427C33700909373 /* AudioSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioSession.swift; path = SCAudioStream/Classes/AudioSessionController/AudioSession.swift; sourceTree = SOURCE_ROOT; };
+		C5014BF62427C33700909373 /* AudioSessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioSessionController.swift; path = SCAudioStream/Classes/AudioSessionController/AudioSessionController.swift; sourceTree = SOURCE_ROOT; };
 		C5190F6D2425132500C57795 /* libSCAudioStream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSCAudioStream.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5190F702425132500C57795 /* SCAudioStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCAudioStream.swift; sourceTree = "<group>"; };
+		C5190F9B2425321B00C57795 /* SCAudioStreamTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCAudioStreamTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5190F9D2425321B00C57795 /* SCAudioStreamTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCAudioStreamTest.swift; sourceTree = "<group>"; };
+		C5190F9F2425321B00C57795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,13 +76,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C5190F982425321B00C57795 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5190FA02425321B00C57795 /* libSCAudioStream.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C5014BC32427927B00909373 /* AVPlayerWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				C5014BD82427B2E800909373 /* AVPlayerWrapper.swift */,
+				C5014BDA2427B2E800909373 /* AVPlayerWrapperDelegate.swift */,
+				C5014BD92427B2E800909373 /* AVPlayerWrapperProtocol.swift */,
+				C5014BDB2427B2E800909373 /* AVPlayerWrapperState.swift */,
+			);
+			path = AVPlayerWrapper;
+			sourceTree = "<group>";
+		};
+		C5014BF02427C1A600909373 /* AudioSessionController */ = {
+			isa = PBXGroup;
+			children = (
+				C5014BF52427C33700909373 /* AudioSession.swift */,
+				C5014BF62427C33700909373 /* AudioSessionController.swift */,
+			);
+			path = AudioSessionController;
+			sourceTree = "<group>";
+		};
 		C5190F642425132500C57795 = {
 			isa = PBXGroup;
 			children = (
 				C5190F6F2425132500C57795 /* SCAudioStream */,
+				C5190F9C2425321B00C57795 /* SCAudioStreamTest */,
 				C5190F6E2425132500C57795 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				C5190F6D2425132500C57795 /* libSCAudioStream.a */,
+				C5190F9B2425321B00C57795 /* SCAudioStreamTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,9 +128,35 @@
 		C5190F6F2425132500C57795 /* SCAudioStream */ = {
 			isa = PBXGroup;
 			children = (
-				C5190F702425132500C57795 /* SCAudioStream.swift */,
+				C5014BF02427C1A600909373 /* AudioSessionController */,
+				C5014BE72427B32000909373 /* APError.swift */,
+				C5014BEA2427B32000909373 /* AudioItem.swift */,
+				C5014BE92427B32000909373 /* Event.swift */,
+				C5014BE62427B32000909373 /* SCAudioStream.swift */,
+				C5014BE82427B32000909373 /* TimeEventFrequency.swift */,
+				C5014BC32427927B00909373 /* AVPlayerWrapper */,
+				C5190FD22427900A00C57795 /* Observer */,
 			);
 			path = SCAudioStream;
+			sourceTree = "<group>";
+		};
+		C5190F9C2425321B00C57795 /* SCAudioStreamTest */ = {
+			isa = PBXGroup;
+			children = (
+				C5190F9D2425321B00C57795 /* SCAudioStreamTest.swift */,
+				C5190F9F2425321B00C57795 /* Info.plist */,
+			);
+			path = SCAudioStreamTest;
+			sourceTree = "<group>";
+		};
+		C5190FD22427900A00C57795 /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				C5014BE12427B2FF00909373 /* AVPlayerItemObserver.swift */,
+				C5014BE02427B2FF00909373 /* AVPlayerObserver.swift */,
+				C5014BE22427B2FF00909373 /* AVPlayerTimeObserver.swift */,
+			);
+			path = Observer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +179,24 @@
 			productReference = C5190F6D2425132500C57795 /* libSCAudioStream.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		C5190F9A2425321B00C57795 /* SCAudioStreamTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5190FA52425321B00C57795 /* Build configuration list for PBXNativeTarget "SCAudioStreamTest" */;
+			buildPhases = (
+				C5190F972425321B00C57795 /* Sources */,
+				C5190F982425321B00C57795 /* Frameworks */,
+				C5190F992425321B00C57795 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5190FA22425321B00C57795 /* PBXTargetDependency */,
+			);
+			name = SCAudioStreamTest;
+			productName = SCAudioStreamTest;
+			productReference = C5190F9B2425321B00C57795 /* SCAudioStreamTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +208,9 @@
 				ORGANIZATIONNAME = "Suman Chatterjee";
 				TargetAttributes = {
 					C5190F6C2425132500C57795 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					C5190F9A2425321B00C57795 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
@@ -111,20 +229,60 @@
 			projectRoot = "";
 			targets = (
 				C5190F6C2425132500C57795 /* SCAudioStream */,
+				C5190F9A2425321B00C57795 /* SCAudioStreamTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5190F992425321B00C57795 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C5190F692425132500C57795 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5190F712425132500C57795 /* SCAudioStream.swift in Sources */,
+				C5014BF72427C33700909373 /* AudioSession.swift in Sources */,
+				C5014BE32427B2FF00909373 /* AVPlayerObserver.swift in Sources */,
+				C5014BEE2427B32000909373 /* Event.swift in Sources */,
+				C5014BF82427C33700909373 /* AudioSessionController.swift in Sources */,
+				C5014BEC2427B32000909373 /* APError.swift in Sources */,
+				C5014BEF2427B32000909373 /* AudioItem.swift in Sources */,
+				C5014BED2427B32000909373 /* TimeEventFrequency.swift in Sources */,
+				C5014BE52427B2FF00909373 /* AVPlayerTimeObserver.swift in Sources */,
+				C5014BEB2427B32000909373 /* SCAudioStream.swift in Sources */,
+				C5014BDE2427B2E800909373 /* AVPlayerWrapperDelegate.swift in Sources */,
+				C5014BDF2427B2E800909373 /* AVPlayerWrapperState.swift in Sources */,
+				C5014BDC2427B2E800909373 /* AVPlayerWrapper.swift in Sources */,
+				C5014BE42427B2FF00909373 /* AVPlayerItemObserver.swift in Sources */,
+				C5014BDD2427B2E800909373 /* AVPlayerWrapperProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5190F972425321B00C57795 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5190F9E2425321B00C57795 /* SCAudioStreamTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5190FA22425321B00C57795 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5190F6C2425132500C57795 /* SCAudioStream */;
+			targetProxy = C5190FA12425321B00C57795 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C5190F722425132500C57795 /* Debug */ = {
@@ -267,6 +425,42 @@
 			};
 			name = Release;
 		};
+		C5190FA32425321B00C57795 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VT29F6R7U;
+				INFOPLIST_FILE = SCAudioStreamTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Dreamapps.SCAudioStreamTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C5190FA42425321B00C57795 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VT29F6R7U;
+				INFOPLIST_FILE = SCAudioStreamTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Dreamapps.SCAudioStreamTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -284,6 +478,15 @@
 			buildConfigurations = (
 				C5190F752425132500C57795 /* Debug */,
 				C5190F762425132500C57795 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5190FA52425321B00C57795 /* Build configuration list for PBXNativeTarget "SCAudioStreamTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5190FA32425321B00C57795 /* Debug */,
+				C5190FA42425321B00C57795 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
