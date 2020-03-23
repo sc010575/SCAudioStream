@@ -23,7 +23,13 @@
 		C5014BF82427C33700909373 /* AudioSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BF62427C33700909373 /* AudioSessionController.swift */; };
 		C5190F9E2425321B00C57795 /* SCAudioStreamTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5190F9D2425321B00C57795 /* SCAudioStreamTest.swift */; };
 		C5190FA02425321B00C57795 /* libSCAudioStream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5190F6D2425132500C57795 /* libSCAudioStream.a */; };
-		C5A5B1442428BE5C008C432A /* AVPlayerItemNotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B1432428BE5C008C432A /* AVPlayerItemNotificationObserver.swift */; };
+		C5A5B1462428C2CB008C432A /* AVPlayerItemNotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B1452428C2CB008C432A /* AVPlayerItemNotificationObserver.swift */; };
+		C5A5B14D2428D8A7008C432A /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B1482428D8A7008C432A /* Source.swift */; };
+		C5A5B14E2428D8A7008C432A /* WAV-MP3.wav in Resources */ = {isa = PBXBuildFile; fileRef = C5A5B1492428D8A7008C432A /* WAV-MP3.wav */; };
+		C5A5B14F2428D8A7008C432A /* ShortTestSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C5A5B14A2428D8A7008C432A /* ShortTestSound.m4a */; };
+		C5A5B1502428D8A7008C432A /* TestSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C5A5B14B2428D8A7008C432A /* TestSound.m4a */; };
+		C5A5B1512428D8A7008C432A /* nasa_throttle_up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5A5B14C2428D8A7008C432A /* nasa_throttle_up.mp3 */; };
+		C5A5B15324290FC9008C432A /* AVPlayerWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B15224290FC9008C432A /* AVPlayerWrapperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +73,13 @@
 		C5190F9B2425321B00C57795 /* SCAudioStreamTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCAudioStreamTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5190F9D2425321B00C57795 /* SCAudioStreamTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCAudioStreamTest.swift; sourceTree = "<group>"; };
 		C5190F9F2425321B00C57795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C5A5B1432428BE5C008C432A /* AVPlayerItemNotificationObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AVPlayerItemNotificationObserver.swift; path = SCAudioStream/Classes/AudioSessionController/AVPlayerItemNotificationObserver.swift; sourceTree = SOURCE_ROOT; };
+		C5A5B1452428C2CB008C432A /* AVPlayerItemNotificationObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVPlayerItemNotificationObserver.swift; path = SCAudioStream/Classes/Observer/AVPlayerItemNotificationObserver.swift; sourceTree = SOURCE_ROOT; };
+		C5A5B1482428D8A7008C432A /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		C5A5B1492428D8A7008C432A /* WAV-MP3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "WAV-MP3.wav"; sourceTree = "<group>"; };
+		C5A5B14A2428D8A7008C432A /* ShortTestSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShortTestSound.m4a; sourceTree = "<group>"; };
+		C5A5B14B2428D8A7008C432A /* TestSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TestSound.m4a; sourceTree = "<group>"; };
+		C5A5B14C2428D8A7008C432A /* nasa_throttle_up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nasa_throttle_up.mp3; sourceTree = "<group>"; };
+		C5A5B15224290FC9008C432A /* AVPlayerWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerWrapperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +157,10 @@
 		C5190F9C2425321B00C57795 /* SCAudioStreamTest */ = {
 			isa = PBXGroup;
 			children = (
+				C5A5B1472428D8A7008C432A /* Source */,
 				C5190F9D2425321B00C57795 /* SCAudioStreamTest.swift */,
 				C5190F9F2425321B00C57795 /* Info.plist */,
+				C5A5B15224290FC9008C432A /* AVPlayerWrapperTests.swift */,
 			);
 			path = SCAudioStreamTest;
 			sourceTree = "<group>";
@@ -154,12 +168,24 @@
 		C5190FD22427900A00C57795 /* Observer */ = {
 			isa = PBXGroup;
 			children = (
+				C5A5B1452428C2CB008C432A /* AVPlayerItemNotificationObserver.swift */,
 				C5014BE12427B2FF00909373 /* AVPlayerItemObserver.swift */,
 				C5014BE02427B2FF00909373 /* AVPlayerObserver.swift */,
 				C5014BE22427B2FF00909373 /* AVPlayerTimeObserver.swift */,
-				C5A5B1432428BE5C008C432A /* AVPlayerItemNotificationObserver.swift */,
 			);
 			path = Observer;
+			sourceTree = "<group>";
+		};
+		C5A5B1472428D8A7008C432A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C5A5B1482428D8A7008C432A /* Source.swift */,
+				C5A5B1492428D8A7008C432A /* WAV-MP3.wav */,
+				C5A5B14A2428D8A7008C432A /* ShortTestSound.m4a */,
+				C5A5B14B2428D8A7008C432A /* TestSound.m4a */,
+				C5A5B14C2428D8A7008C432A /* nasa_throttle_up.mp3 */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +268,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5A5B1502428D8A7008C432A /* TestSound.m4a in Resources */,
+				C5A5B14E2428D8A7008C432A /* WAV-MP3.wav in Resources */,
+				C5A5B1512428D8A7008C432A /* nasa_throttle_up.mp3 in Resources */,
+				C5A5B14F2428D8A7008C432A /* ShortTestSound.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +293,7 @@
 				C5014BEB2427B32000909373 /* SCAudioStream.swift in Sources */,
 				C5014BDE2427B2E800909373 /* AVPlayerWrapperDelegate.swift in Sources */,
 				C5014BDF2427B2E800909373 /* AVPlayerWrapperState.swift in Sources */,
-				C5A5B1442428BE5C008C432A /* AVPlayerItemNotificationObserver.swift in Sources */,
+				C5A5B1462428C2CB008C432A /* AVPlayerItemNotificationObserver.swift in Sources */,
 				C5014BDC2427B2E800909373 /* AVPlayerWrapper.swift in Sources */,
 				C5014BE42427B2FF00909373 /* AVPlayerItemObserver.swift in Sources */,
 				C5014BDD2427B2E800909373 /* AVPlayerWrapperProtocol.swift in Sources */,
@@ -274,7 +304,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5A5B14D2428D8A7008C432A /* Source.swift in Sources */,
 				C5190F9E2425321B00C57795 /* SCAudioStreamTest.swift in Sources */,
+				C5A5B15324290FC9008C432A /* AVPlayerWrapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
