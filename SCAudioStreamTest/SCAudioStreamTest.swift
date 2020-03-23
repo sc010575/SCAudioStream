@@ -9,7 +9,7 @@
 import XCTest
 @testable import SCAudioStream
 
-class AudioPlayerEventListener {
+class SCAudioStreamEventListener {
 
   var state: AudioPlayerState? {
     didSet {
@@ -53,14 +53,14 @@ class AudioPlayerEventListener {
 
 class SCAudioStreamTest: XCTestCase {
   var audioPlayer: SCAudioStream!
-  var listener: AudioPlayerEventListener!
+  var listener: SCAudioStreamEventListener!
 
   override func setUp() {
     super.setUp()
     audioPlayer = SCAudioStream()
     audioPlayer.volume = 0.0
     audioPlayer.bufferDuration = 0.001
-    listener = AudioPlayerEventListener(audioPlayer: audioPlayer)
+    listener = SCAudioStreamEventListener(audioPlayer: audioPlayer)
   }
 
   override func tearDown() {

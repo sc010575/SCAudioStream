@@ -11,64 +11,17 @@ import AVFoundation
 import XCTest
 @testable import SCAudioStream
 
-class AVPlayerWrapperDelegateHolder: AVPlayerWrapperDelegate {
-    func AVWrapperDidRecreateAVPlayer() {
-        
-    }
-    
-    func AVWrapperItemDidPlayToEndTime() {
-        
-    }
-    
-    var state: AVPlayerWrapperState? {
-        didSet {
-            if let state = state {
-                self.stateUpdate?(state)
-            }
-        }
-    }
-    
-    var stateUpdate: ((_ state: AVPlayerWrapperState) -> Void)?
-    var didUpdateDuration: ((_ duration: Double) -> Void)?
-    var didSeekTo: ((_ seconds: Int) -> Void)?
-    var itemDidComplete: (() -> Void)?
-    
-    func AVWrapper(didChangeState state: AVPlayerWrapperState) {
-        self.state = state
-    }
-    
-    func AVWrapper(secondsElapsed seconds: Double) {
-        
-    }
-    
-    func AVWrapper(failedWithError error: Error?) {
-        
-    }
-    
-    func AVWrapper(seekTo seconds: Int, didFinish: Bool) {
-         didSeekTo?(seconds)
-    }
-    
-    func AVWrapper(didUpdateDuration duration: Double) {
-        if let state = self.state {
-            self.stateUpdate?(state)
-        }
-        didUpdateDuration?(duration)
-    }
-    
-}
-
 class AVPlayerWrapperTests: XCTestCase {
 
   var wrapper: AVPlayerWrapper!
-  var holder: AVPlayerWrapperDelegateHolder!
+  var holder: AVPlayerWrapperDelegateMock!
   var url: URL!
 
   override func setUp() {
     super.setUp()
     wrapper = AVPlayerWrapper()
     wrapper.volume = 0.0
-    holder = AVPlayerWrapperDelegateHolder()
+    holder = AVPlayerWrapperDelegateMock()
     wrapper.delegate = holder
     url = URL(fileURLWithPath: audioItemPath())
   }
