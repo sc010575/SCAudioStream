@@ -23,6 +23,7 @@
 		C5014BF82427C33700909373 /* AudioSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BF62427C33700909373 /* AudioSessionController.swift */; };
 		C5190F9E2425321B00C57795 /* SCAudioStreamTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5190F9D2425321B00C57795 /* SCAudioStreamTest.swift */; };
 		C5190FA02425321B00C57795 /* libSCAudioStream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5190F6D2425132500C57795 /* libSCAudioStream.a */; };
+		C5A5B1442428BE5C008C432A /* AVPlayerItemNotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B1432428BE5C008C432A /* AVPlayerItemNotificationObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		C5190F9B2425321B00C57795 /* SCAudioStreamTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCAudioStreamTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5190F9D2425321B00C57795 /* SCAudioStreamTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCAudioStreamTest.swift; sourceTree = "<group>"; };
 		C5190F9F2425321B00C57795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5A5B1432428BE5C008C432A /* AVPlayerItemNotificationObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AVPlayerItemNotificationObserver.swift; path = SCAudioStream/Classes/AudioSessionController/AVPlayerItemNotificationObserver.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				C5014BE12427B2FF00909373 /* AVPlayerItemObserver.swift */,
 				C5014BE02427B2FF00909373 /* AVPlayerObserver.swift */,
 				C5014BE22427B2FF00909373 /* AVPlayerTimeObserver.swift */,
+				C5A5B1432428BE5C008C432A /* AVPlayerItemNotificationObserver.swift */,
 			);
 			path = Observer;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				C5014BEB2427B32000909373 /* SCAudioStream.swift in Sources */,
 				C5014BDE2427B2E800909373 /* AVPlayerWrapperDelegate.swift in Sources */,
 				C5014BDF2427B2E800909373 /* AVPlayerWrapperState.swift in Sources */,
+				C5A5B1442428BE5C008C432A /* AVPlayerItemNotificationObserver.swift in Sources */,
 				C5014BDC2427B2E800909373 /* AVPlayerWrapper.swift in Sources */,
 				C5014BE42427B2FF00909373 /* AVPlayerItemObserver.swift in Sources */,
 				C5014BDD2427B2E800909373 /* AVPlayerWrapperProtocol.swift in Sources */,

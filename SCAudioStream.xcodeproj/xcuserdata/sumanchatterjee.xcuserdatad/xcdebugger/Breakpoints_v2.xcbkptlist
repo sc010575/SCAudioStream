@@ -39,16 +39,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F1995ED0-4E05-415E-BFE2-A66B4B36953E"
+            uuid = "782669E9-3A30-4403-97C7-E6C78A6EC6F7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SCAudioStream/Classes/SCAudioStream.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "seek(to:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2C9EC569-6E4D-4854-BF95-5A32E7B753F7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SCAudioStream/Classes/AVPlayerWrapper/AVPlayerWrapper.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "289"
-            endingLineNumber = "289"
-            landmarkName = "audioDidStart()"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
+            landmarkName = "player(statusDidChange:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

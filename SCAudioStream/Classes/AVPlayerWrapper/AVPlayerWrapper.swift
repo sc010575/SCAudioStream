@@ -20,6 +20,7 @@ public class AVPlayerWrapper: AVPlayerWrapperProtocol {
   let playerObserver: AVPlayerObserver
   let playerTimeObserver: AVPlayerTimeObserver
   let playerItemObserver: AVPlayerItemObserver
+  let playerItemNotificationObserver: AVPlayerItemNotificationObserver
 
   /**
  True if the last call to load(from:playWhenReady) had playWhenReady=true.
@@ -41,12 +42,15 @@ public class AVPlayerWrapper: AVPlayerWrapperProtocol {
     self.playerObserver.player = avPlayer
     self.playerTimeObserver = AVPlayerTimeObserver(periodicObserverTimeInterval: timeEventFrequency.getTime())
     self.playerTimeObserver.player = avPlayer
+    self.playerItemNotificationObserver = AVPlayerItemNotificationObserver()
     self.playerItemObserver = AVPlayerItemObserver()
 
     self.playerObserver.delegate = self
     self.playerTimeObserver.delegate = self
     self.playerItemObserver.delegate = self
+    self.playerItemNotificationObserver.delegate = self
     playerTimeObserver.registerForPeriodicTimeEvents()
+
   }
 
   // MARK: - AVPlayerWrapperProtocol
@@ -184,6 +188,9 @@ public class AVPlayerWrapper: AVPlayerWrapperProtocol {
                 // Register for events
                 self.playerTimeObserver.registerForBoundaryTimeEvents()
                 self.playerObserver.startObserving()
+                self.playerItemNotificationObserver.startObserving(item: currentItem)
+                self.playerItemObserver.startObserving(item: currentItem)
+
               }
               break
 
@@ -305,3 +312,14 @@ extension AVPlayerWrapper: AVPlayerItemObserverDelegate {
   }
 
 }
+
+extension AVPlayerWrapper: AVPlayerItemNotificationObserverDelegate {
+    
+    // MARK: - AVPlayerItemNotificationObserverDelegate
+    
+    func itemDidPlayToEndTime() {
+        delegate?.AVWrapperItemDidPlayToEndTime()
+    }
+    
+}
+
