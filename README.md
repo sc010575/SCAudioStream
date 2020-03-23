@@ -2,16 +2,13 @@
 
 SCAudioStream is an audio player written in Swift 5 , making it simpler to work with simple audio playback from streams and files. Currently supported only a single audio file at a time.
 
-## Example
+## Example (AudioStream)
 
-To see the audio player in action, run the example project!
+To see the audio player in action, run the example project - AudioStream!
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
 iOS 12.0+
-
-## Installation
-
 
 ## Usage
 
