@@ -12,13 +12,6 @@ iOS 12.0+
 
 ## Installation
 
-### CocoaPods
-SwiftAudio is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'SwiftAudio', '~> 0.11.2'
-```
 
 ## Usage
 
