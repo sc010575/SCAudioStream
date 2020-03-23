@@ -13,6 +13,7 @@ extension SCAudioStream {
   public typealias StateChangeEventData = (AudioPlayerState)
   public typealias FailEventData = (Error?)
   public typealias SeekEventData = (seconds: Int, didFinish: Bool)
+  public typealias SecondElapseEventData = (TimeInterval)
   public typealias UpdateDurationEventData = (Double)
   public typealias PlaybackEndEventData = (PlaybackEndedReason)
   public typealias DidRecreateAVPlayerEventData = ()
@@ -21,15 +22,12 @@ extension SCAudioStream {
 
     /**
          Emitted when the `AudioPlayer`s state is changed
-         - Important: Remember to dispatch to the main queue if any UI is updated in the event handler.
          */
     public let stateChange: SCAudioStream.Event<StateChangeEventData> = SCAudioStream.Event()
 
     /**
          Emitted when the player encounters an error. This will ultimately result in the AVPlayer instance to be recreated.
-         If this event is emitted, it means you will need to load a new item in some way. Calling play() will not resume playback.
-         - Important: Remember to dispatch to the main queue if any UI is updated in the event handler.
-         */
+     */
     public let fail: SCAudioStream.Event<FailEventData> = SCAudioStream.Event()
 
     /**
@@ -37,18 +35,24 @@ extension SCAudioStream {
          - Important: Remember to dispatch to the main queue if any UI is updated in the event handler.
          */
     public let seek: SCAudioStream.Event<SeekEventData> = SCAudioStream.Event()
+    
+    /**
+      Emitted when a second is elapsed in the `AudioPlayer`.
+      - Important: Remember to dispatch to the main queue if any UI is updated in the event handler.
+      */
+     public let secondElapse: SCAudioStream.Event<SecondElapseEventData> = SCAudioStream.Event()
 
     /**
          Emitted when the player updates its duration.
          - Important: Remember to dispatch to the main queue if any UI is updated in the event handler.
          */
     public let updateDuration: SCAudioStream.Event<UpdateDurationEventData> = SCAudioStream.Event()
-    
+
     /**
       Emitted when the playback of the player, for some reason, has stopped.
       - Important: Remember to dispatch to the main queue if any UI is updated in the event handler.
       */
-     public let playbackEnd: SCAudioStream.Event<PlaybackEndEventData> = SCAudioStream.Event()
+    public let playbackEnd: SCAudioStream.Event<PlaybackEndEventData> = SCAudioStream.Event()
 
     /**
          Emitted when the underlying AVPlayer instance is recreated. Recreation happens if the current player fails.
@@ -118,7 +122,5 @@ extension SCAudioStream {
         self.invokersSemaphore.signal()
       }
     }
-
   }
-
 }

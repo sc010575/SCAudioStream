@@ -111,5 +111,4 @@ class AVPlayerObserver: NSObject {
             delegate?.player(didChangeTimeControlStatus: status)
         }
     }
-    
 }

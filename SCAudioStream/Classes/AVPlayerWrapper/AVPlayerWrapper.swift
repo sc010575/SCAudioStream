@@ -19,7 +19,6 @@ public class AVPlayerWrapper: AVPlayerWrapperProtocol {
   var avPlayer: AVPlayer
   let playerObserver: AVPlayerObserver
   let playerTimeObserver: AVPlayerTimeObserver
-//  let playerItemNotificationObserver: AVPlayerItemNotificationObserver
   let playerItemObserver: AVPlayerItemObserver
 
   /**
@@ -47,8 +46,7 @@ public class AVPlayerWrapper: AVPlayerWrapperProtocol {
     self.playerObserver.delegate = self
     self.playerTimeObserver.delegate = self
     self.playerItemObserver.delegate = self
-
-//    playerTimeObserver.registerForPeriodicTimeEvents()
+    playerTimeObserver.registerForPeriodicTimeEvents()
   }
 
   // MARK: - AVPlayerWrapperProtocol
@@ -95,11 +93,11 @@ public class AVPlayerWrapper: AVPlayerWrapperProtocol {
   var bufferDuration: TimeInterval = 0
 
   var timeEventFrequency: TimeEventFrequency = .everySecond {
-    didSet {
-//      playerTimeObserver.periodicObserverTimeInterval = timeEventFrequency.getTime()
-    }
+      didSet {
+          playerTimeObserver.periodicObserverTimeInterval = timeEventFrequency.getTime()
+      }
   }
-
+  
   var rate: Float {
     get { return avPlayer.rate }
     set { avPlayer.rate = newValue }
@@ -232,11 +230,10 @@ public class AVPlayerWrapper: AVPlayerWrapperProtocol {
     let player = AVPlayer()
     playerObserver.player = player
     playerTimeObserver.player = player
- //   playerTimeObserver.registerForPeriodicTimeEvents()
+    playerTimeObserver.registerForPeriodicTimeEvents()
     avPlayer = player
     delegate?.AVWrapperDidRecreateAVPlayer()
   }
-
 }
 
 extension AVPlayerWrapper: AVPlayerObserverDelegate {
@@ -293,11 +290,10 @@ extension AVPlayerWrapper: AVPlayerTimeObserverDelegate {
   func audioDidStart() {
     self._state = .playing
   }
-
-//  func timeEvent(time: CMTime) {
-//    self.delegate?.AVWrapper(secondsElapsed: time.seconds)
-//  }
-
+  
+  func timeEvent(time: CMTime) {
+      self.delegate?.AVWrapper(secondsElapsed: time.seconds)
+  }
 }
 
 extension AVPlayerWrapper: AVPlayerItemObserverDelegate {

@@ -180,13 +180,6 @@ public class SCAudioStream: AVPlayerWrapperDelegate {
 
   func AVWrapper(didChangeState state: AVPlayerWrapperState) {
     self.event.stateChange.emit(data: state)
-    switch state {
-    case .ready, .loading:
-      print(state)
-    case .playing, .paused:
-      print(state)
-    default: break
-    }
   }
 
   func AVWrapper(failedWithError error: Error?) {
@@ -195,6 +188,10 @@ public class SCAudioStream: AVPlayerWrapperDelegate {
 
   func AVWrapper(seekTo seconds: Int, didFinish: Bool) {
     self.event.seek.emit(data: (seconds, didFinish))
+  }
+
+  func AVWrapper(secondsElapsed seconds: Double) {
+      self.event.secondElapse.emit(data: seconds)
   }
 
   func AVWrapper(didUpdateDuration duration: Double) {

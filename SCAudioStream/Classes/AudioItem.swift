@@ -28,7 +28,7 @@ public protocol InitialTiming {
     func getInitialTime() -> TimeInterval
 }
 
-/// Make your `AudioItem`-subclass conform to this protocol to set initialization options for the asset. Available keys available at [Apple Developer Documentation](https://developer.apple.com/documentation/avfoundation/avurlasset/initialization_options).
+/// AudioItem`-subclass conform to this protocol to set initialization options for the asset. 
 public protocol AssetOptionsProviding {
     func getAssetOptions() -> [String: Any]
 }
