@@ -23,7 +23,7 @@ public protocol AudioItem {
     func getSourceType() -> SourceType
 }
 
-/// Make your `AudioItem`-subclass conform to this protocol to control enable the ability to start an item at a specific time of playback.
+/// AudioItem`-subclass conform to this protocol to control enable the ability to start an item at a specific time of playback.
 public protocol InitialTiming {
     func getInitialTime() -> TimeInterval
 }

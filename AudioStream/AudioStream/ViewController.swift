@@ -29,6 +29,8 @@ extension Double {
 class ViewController: UIViewController {
   @IBOutlet weak var artistLabel: UILabel!
   @IBOutlet weak var songTitleLabel: UILabel!
+  @IBOutlet weak var prevButton: UIButton!
+  @IBOutlet weak var fastButton: UIButton!
   @IBOutlet weak var playButton: UIButton!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var statusLabel: UILabel!
@@ -69,8 +71,16 @@ class ViewController: UIViewController {
     player.togglePlaying()
   }
 
+  @IBAction func onTapForward(_ sender: Any) {
+    player.seek(to: 15)
+  }
+  @IBAction func onTapRewinds(_ sender: Any) {
+    player.seek(to: -15)
+  }
   private func setPlayButtonState(forAudioPlayerState state: AudioPlayerState) {
-    playButton.setTitle(state == .playing ? "Pause Audio" : "Play Audio", for: .normal)
+    playButton.setTitle(state == .playing ? "Pause" : "Play", for: .normal)
+    prevButton.isHidden = state == .playing ? false : true
+    fastButton.isHidden = state == .playing ? false : true
   }
 
   private func updateTimeValues() {
@@ -84,8 +94,6 @@ class ViewController: UIViewController {
       artistLabel.text = item.getArtist()
     }
   }
-
-
 // MARK: - AudioPlayer Event Handlers
 
   func handleAudioPlayerStateChange(data: SCAudioStream.StateChangeEventData) {

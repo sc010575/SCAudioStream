@@ -32,15 +32,13 @@ extension SCAudioStream {
 
     /**
          Emitted when the player is done attempting to seek.
-         - Important: Remember to dispatch to the main queue if any UI is updated in the event handler.
-         */
+    */
     public let seek: SCAudioStream.Event<SeekEventData> = SCAudioStream.Event()
-    
+
     /**
       Emitted when a second is elapsed in the `AudioPlayer`.
-      - Important: Remember to dispatch to the main queue if any UI is updated in the event handler.
-      */
-     public let secondElapse: SCAudioStream.Event<SecondElapseEventData> = SCAudioStream.Event()
+    */
+    public let secondElapse: SCAudioStream.Event<SecondElapseEventData> = SCAudioStream.Event()
 
     /**
          Emitted when the player updates its duration.
@@ -56,7 +54,6 @@ extension SCAudioStream {
 
     /**
          Emitted when the underlying AVPlayer instance is recreated. Recreation happens if the current player fails.
-         - Important: Remember to dispatch to the main queue if any UI is updated in the event handler.
          - Note: It can be necessary to set the AVAudioSession's category again when this event is emitted.
          */
     public let didRecreateAVPlayer: SCAudioStream.Event<()> = SCAudioStream.Event()

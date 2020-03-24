@@ -52,7 +52,9 @@ class AVPlayerItemObserver: NSObject {
         item.addObserver(self, forKeyPath: AVPlayerItemKeyPath.duration, options: [.new], context: &AVPlayerItemObserver.context)
         item.addObserver(self, forKeyPath: AVPlayerItemKeyPath.loadedTimeRanges, options: [.new], context: &AVPlayerItemObserver.context)
     }
-    
+    /**
+     Stop observing the current Item.
+   */
     func stopObservingCurrentItem() {
         guard let observingItem = observingItem, isObserving else {
             return

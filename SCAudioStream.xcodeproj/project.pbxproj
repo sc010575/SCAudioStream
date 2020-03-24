@@ -23,15 +23,14 @@
 		C5014BF82427C33700909373 /* AudioSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5014BF62427C33700909373 /* AudioSessionController.swift */; };
 		C5190F9E2425321B00C57795 /* SCAudioStreamTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5190F9D2425321B00C57795 /* SCAudioStreamTest.swift */; };
 		C5190FA02425321B00C57795 /* libSCAudioStream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5190F6D2425132500C57795 /* libSCAudioStream.a */; };
+		C532FBCA2429D8D90092334C /* AVPlayerObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C532FBC92429D8D90092334C /* AVPlayerObserverTests.swift */; };
+		C532FBCC2429E7140092334C /* AVPlayerObserverDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C532FBCB2429E7140092334C /* AVPlayerObserverDelegateMock.swift */; };
 		C54FA06B24292D41005E459A /* AudioSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54FA06A24292D41005E459A /* AudioSessionMock.swift */; };
 		C54FA06D24292DB3005E459A /* AudioSessionControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54FA06C24292DB3005E459A /* AudioSessionControllerTests.swift */; };
 		C54FA06F24292FAD005E459A /* AVPlayerWrapperDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54FA06E24292FAD005E459A /* AVPlayerWrapperDelegateMock.swift */; };
 		C5A5B1462428C2CB008C432A /* AVPlayerItemNotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B1452428C2CB008C432A /* AVPlayerItemNotificationObserver.swift */; };
 		C5A5B14D2428D8A7008C432A /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B1482428D8A7008C432A /* Source.swift */; };
-		C5A5B14E2428D8A7008C432A /* WAV-MP3.wav in Resources */ = {isa = PBXBuildFile; fileRef = C5A5B1492428D8A7008C432A /* WAV-MP3.wav */; };
-		C5A5B14F2428D8A7008C432A /* ShortTestSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C5A5B14A2428D8A7008C432A /* ShortTestSound.m4a */; };
 		C5A5B1502428D8A7008C432A /* TestSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C5A5B14B2428D8A7008C432A /* TestSound.m4a */; };
-		C5A5B1512428D8A7008C432A /* nasa_throttle_up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5A5B14C2428D8A7008C432A /* nasa_throttle_up.mp3 */; };
 		C5A5B15324290FC9008C432A /* AVPlayerWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B15224290FC9008C432A /* AVPlayerWrapperTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,15 +75,14 @@
 		C5190F9B2425321B00C57795 /* SCAudioStreamTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCAudioStreamTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5190F9D2425321B00C57795 /* SCAudioStreamTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCAudioStreamTest.swift; sourceTree = "<group>"; };
 		C5190F9F2425321B00C57795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C532FBC92429D8D90092334C /* AVPlayerObserverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerObserverTests.swift; sourceTree = "<group>"; };
+		C532FBCB2429E7140092334C /* AVPlayerObserverDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerObserverDelegateMock.swift; sourceTree = "<group>"; };
 		C54FA06A24292D41005E459A /* AudioSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSessionMock.swift; sourceTree = "<group>"; };
 		C54FA06C24292DB3005E459A /* AudioSessionControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSessionControllerTests.swift; sourceTree = "<group>"; };
 		C54FA06E24292FAD005E459A /* AVPlayerWrapperDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerWrapperDelegateMock.swift; sourceTree = "<group>"; };
 		C5A5B1452428C2CB008C432A /* AVPlayerItemNotificationObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVPlayerItemNotificationObserver.swift; path = SCAudioStream/Classes/Observer/AVPlayerItemNotificationObserver.swift; sourceTree = SOURCE_ROOT; };
 		C5A5B1482428D8A7008C432A /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
-		C5A5B1492428D8A7008C432A /* WAV-MP3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "WAV-MP3.wav"; sourceTree = "<group>"; };
-		C5A5B14A2428D8A7008C432A /* ShortTestSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShortTestSound.m4a; sourceTree = "<group>"; };
 		C5A5B14B2428D8A7008C432A /* TestSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TestSound.m4a; sourceTree = "<group>"; };
-		C5A5B14C2428D8A7008C432A /* nasa_throttle_up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nasa_throttle_up.mp3; sourceTree = "<group>"; };
 		C5A5B15224290FC9008C432A /* AVPlayerWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerWrapperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,12 +161,13 @@
 		C5190F9C2425321B00C57795 /* SCAudioStreamTest */ = {
 			isa = PBXGroup;
 			children = (
+				C5190F9F2425321B00C57795 /* Info.plist */,
 				C54FA06924292D26005E459A /* MOCK */,
 				C5A5B1472428D8A7008C432A /* Source */,
 				C5190F9D2425321B00C57795 /* SCAudioStreamTest.swift */,
 				C5A5B15224290FC9008C432A /* AVPlayerWrapperTests.swift */,
 				C54FA06C24292DB3005E459A /* AudioSessionControllerTests.swift */,
-				C5190F9F2425321B00C57795 /* Info.plist */,
+				C532FBC92429D8D90092334C /* AVPlayerObserverTests.swift */,
 			);
 			path = SCAudioStreamTest;
 			sourceTree = "<group>";
@@ -189,6 +188,7 @@
 			children = (
 				C54FA06A24292D41005E459A /* AudioSessionMock.swift */,
 				C54FA06E24292FAD005E459A /* AVPlayerWrapperDelegateMock.swift */,
+				C532FBCB2429E7140092334C /* AVPlayerObserverDelegateMock.swift */,
 			);
 			path = MOCK;
 			sourceTree = "<group>";
@@ -197,10 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				C5A5B1482428D8A7008C432A /* Source.swift */,
-				C5A5B1492428D8A7008C432A /* WAV-MP3.wav */,
-				C5A5B14A2428D8A7008C432A /* ShortTestSound.m4a */,
 				C5A5B14B2428D8A7008C432A /* TestSound.m4a */,
-				C5A5B14C2428D8A7008C432A /* nasa_throttle_up.mp3 */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -286,9 +283,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5A5B1502428D8A7008C432A /* TestSound.m4a in Resources */,
-				C5A5B14E2428D8A7008C432A /* WAV-MP3.wav in Resources */,
-				C5A5B1512428D8A7008C432A /* nasa_throttle_up.mp3 in Resources */,
-				C5A5B14F2428D8A7008C432A /* ShortTestSound.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,9 +317,11 @@
 			files = (
 				C5A5B14D2428D8A7008C432A /* Source.swift in Sources */,
 				C5190F9E2425321B00C57795 /* SCAudioStreamTest.swift in Sources */,
+				C532FBCA2429D8D90092334C /* AVPlayerObserverTests.swift in Sources */,
 				C54FA06F24292FAD005E459A /* AVPlayerWrapperDelegateMock.swift in Sources */,
 				C5A5B15324290FC9008C432A /* AVPlayerWrapperTests.swift in Sources */,
 				C54FA06D24292DB3005E459A /* AudioSessionControllerTests.swift in Sources */,
+				C532FBCC2429E7140092334C /* AVPlayerObserverDelegateMock.swift in Sources */,
 				C54FA06B24292D41005E459A /* AudioSessionMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
